@@ -1,0 +1,4 @@
+program = {stmt} END
+stmt = assignment
+assigment = TYPE IDENTIFIER "=" expression
+expression = INTEGER | IDENTIFIER
