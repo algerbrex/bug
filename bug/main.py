@@ -1,4 +1,3 @@
-from ast import arg
 from sys import argv
 from .parser import Parser
 from .error import CompilingException
