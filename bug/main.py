@@ -3,7 +3,7 @@ from sys import argv
 from .parser import Parser
 from .error import CompilingException
 
-if __name__ == '__main__':
+def main():
     if len(argv) <= 1:
         print("error: compiler requires an input program file")
     else:
@@ -21,3 +21,6 @@ if __name__ == '__main__':
                     print("file successfully compiled")
         except FileNotFoundError:
             print(f'error: file "{program_filename}" cannot be found')
+
+if __name__ == '__main__':
+    main()
