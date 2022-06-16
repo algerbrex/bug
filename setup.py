@@ -7,7 +7,7 @@ Bug is a simple, toy programming language'''
 
 
 setup(
-    name='Schemey',
+    name='Bug',
     description=DESCRIPTION,
     author="Christian Dean",
     version='0.1',
