@@ -92,7 +92,6 @@ class Parser:
 
     def _check_then_consume(self, should_be: Union[TokenType, 'str']) -> Token:
         if self._curr_token.tok_type != should_be and self._curr_token.value != should_be:
-            print(self._curr_token)
             self._error(PARSING_ERROR)
 
         curr_token = self._curr_token

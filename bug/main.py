@@ -8,15 +8,19 @@ def main():
     else:
         program_filename = argv[1]
         output_filename = program_filename.split('.')[0] + '.c'
+        program = ''
+        
         try:
-            with open(program_filename, 'r') as infile, open(output_filename, 'w') as outfile:
+            with open(program_filename, 'r') as infile, open(output_filename, 'a') as outfile:
                 parser = Parser(infile.read())
                 try:
                     ast = parser.parse()
+                    program = ast.gen_code()
                 except CompilingException as err:
                     print(err)
                 else:
-                    outfile.write(ast.gen_code())
+                    outfile.truncate(0)
+                    outfile.write(program)
                     print("file successfully compiled")
         except FileNotFoundError:
             print(f'error: file "{program_filename}" cannot be found')

@@ -2,7 +2,7 @@ class CompilingException(Exception):
     pass
 
 ILLEGAL_CHAR = "'{}' is an illegal character"
-MISMATCHED_TYPES = "mistmatched types '{}' and '{}'"
+MISMATCHED_TYPES = "mismatched types '{}' and '{}'"
 PARSING_ERROR = "invalid syntax"
 UNDEFINED_IDENT = "undefined identifier '{}'"
 DEFINED_IDENT = "'{}' was already defined."
